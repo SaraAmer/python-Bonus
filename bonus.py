@@ -15,9 +15,13 @@ def playAgain():
     oldTries.clear() 
 def playGame():
     global tries
+    x = -1
     while True:
         if(tries < 10):
-            x = int(input('Enter a number between 0 and 100'))
+            try:
+              x = eval(input('Enter a number between 0 and 100'))
+            except:
+              print("invalid choice")
             if (x<0 or x > 100):
                 print("please enter only numbers between 0 and 10")
             else:
